@@ -52,10 +52,12 @@ species14var.send();
 
 const filmListElem = new XMLHttpRequest(); //film request
 const filmListUnordered = document.getElementById('filmList'); //unordered film list
-filmListUnordered.innerHTML += '<h1>Films</h2>'
+filmListUnordered.innerHTML += '<h2>Films</h2>'
 const firstFilm = document.createElement('li'); //first film list
 const film1 = document.getElementById('film1title');
-const filmListPlanets = document.createElement('ul');//planets unordered list
+const filmPlanets = document.createElement('ul');//planets unordered list
+
+
 
 function filmOne () {
   firstFilm.className = "film";
@@ -76,11 +78,11 @@ filmListElem.send();
 
 //second film
 const secFilm = document.createElement('li'); //first film list
-//films.appendChild(filmListUnordered);
+
 
 function filmTwo () {
   secFilm.className = "film";
-  //firstFilm.id = 'film1title';
+  //secFilm.id = 'film2title';
   filmListUnordered.innerHTML += '<br>' + JSON.parse(filmListElem['response']).results[1].title;
 };
 
@@ -91,11 +93,11 @@ filmListElem.addEventListener("load", filmTwo);
 //third film
 
 const thirdFilm = document.createElement('li'); //first film list
-//films.appendChild(filmListUnordered);
+
 
 function filmThree () {
   thirdFilm.className = "film";
-  //firstFilm.id = 'film1title';
+  //thirdFilm.id = 'film3title';
   filmListUnordered.innerHTML += '<br>' + JSON.parse(filmListElem['response']).results[2].title;
 };
 
@@ -107,11 +109,10 @@ filmListElem.addEventListener("load", filmThree);
 //fourth film
 
 const fourFilm = document.createElement('li'); //first film list
-//films.appendChild(filmListUnordered);
 
 function filmFour () {
   fourFilm.className = "film";
-  //firstFilm.id = 'film1title';
+  //fourthFilm.id = 'film4title';
   filmListUnordered.innerHTML += '<br>' + JSON.parse(filmListElem['response']).results[3].title;
 };
 
@@ -126,7 +127,7 @@ films.appendChild(filmListUnordered);
 
 function filmFive () {
   fiveFilm.className = "film";
-  //firstFilm.id = 'film1title';
+  //fiveFilm.id = 'film5title';
   filmListUnordered.innerHTML += '<br>' + JSON.parse(filmListElem['response']).results[4].title;
 };
 
@@ -141,7 +142,7 @@ films.appendChild(filmListUnordered);
 
 function filmSix () {
   sixthFilm.className = "film";
-  //firstFilm.id = 'film1title';
+  //sixthFilm.id = 'film6title';
   filmListUnordered.innerHTML += '<br>' + JSON.parse(filmListElem['response']).results[5].title;
 };
 
@@ -156,10 +157,16 @@ films.appendChild(filmListUnordered);
 
 function filmSeven () {
   sevFilm.className = "film";
-  //firstFilm.id = 'film1title';
+  //sevFilm.id = 'film7title';
   filmListUnordered.innerHTML += '<br>' + JSON.parse(filmListElem['response']).results[6].title;
 };
 
 filmListElem.addEventListener("load", filmSeven);
 //filmListElem.open("GET", "https://swapi.co/api/films/");
 //filmListElem.send();
+
+
+//planets list
+
+const listingPlanets = document.createElement('li');
+listingPlanets.id = "filmPlanet";
